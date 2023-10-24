@@ -1,0 +1,102 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.nav-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  background-color: black;
+  color: white;
+  margin-bottom: 15px;
+
+}
+.nav-bar h1 {
+  font-size: 38px;
+  font-weight: 700;
+  margin: 5px 8px;
+}
+span {
+  color: red;
+}
+.nav-bar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-bar ul li {
+  list-style: none;
+  padding-right: 15px;
+}
+.nav-bar ul li a {
+  padding: 10px 14px;
+  list-style: none;
+  font-size: 24px;
+  text-decoration: none;
+  color: white;
+}
+.nav-bar ul li a:hover {
+  color: #0ef;
+}
+
+/* Apply smooth scrolling behavior to anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+.row {
+  margin: 70px 0;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+}
+
+.col-1 {
+  margin-right: 10px;
+  text-align: center;
+}
+.col-1 img {
+  width: 360px;
+}
+.col-1 h4 {
+  font-size: 20px;
+  padding: 10px 10px;
+}
+.intro {
+  font-size: 30px;
+  font-weight: 400;
+  padding-bottom: 20px;
+  text-align: center;
+  padding-top: 35px;
+  z-index: 2;
+}
+
+.intro h2 {
+  display: inline-block;
+  position: relative;
+}
+
+.intro h2::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 6px;
+  background-color: orange;
+  margin: 10px auto;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  padding: 25px;
+}
+footer a {
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+}
