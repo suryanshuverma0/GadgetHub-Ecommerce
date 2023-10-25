@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <link rel="stylesheet" href="/css/login.css" />
+</head>
+
+<body>
+  <div class="container">
+    <nav class="nav-bar">
+      <h1>Gadget<span>Hub</span></h1>
+      <ul>
+        <li><a href="/html/login.html">Login</a></li>
+        <li><a href="/html/register.html">Register</a></li>
+      </ul>
+    </nav>
+    <div class="centered-login-container">
+      <h2>Login</h2>
+      <form class="login-form" action="your_server_endpoint" method="post">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter your username"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+          />
+        </div>
+        <button type="submit" class="login-button" id="login-button">
+          Login
+        </button>
+        <p>Create a new account ?<a href="/html/register.html">Sign Up </a></p>
+      </form>
+    </div>
+  </div>
+</body>
+
+<script>
+  const login_btn = document.getElementById("login-button");
+  login_btn.addEventListener("click", function login(event) {
+    event.preventDefault();
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    // Perform validation here (e.g., check with a server)
+    if (username === "veenasa676@gmail.com" && password === "12345") {
+      window.location.href = "/html/home.html"; // Redirect to home on success
+    } else {
+      alert("Login failed! Please check your credentials.");
+    }
+  });
+</script>
+</html>

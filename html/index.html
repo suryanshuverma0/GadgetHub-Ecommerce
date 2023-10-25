@@ -3,50 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Product Landing Paage</title>
     <link rel="stylesheet" href="/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
+
   <body>
     <div class="container">
-      <div class="form">
-        <button type="button" id="Login">Login</button>
-        <button type="button" id="Register">Register</button>
-        <div class="login-form" id="login-form">
-          <form>
-            <input type="text" placeholder="Username" required /><br>
-            <input type="password" placeholder="Password" required /><br>
-            <button type="submit">Login</button><br>
-            <h4><a>Forgot Password</a></h4><br>
-          </form>
-        </div>
-        <div class="register-form" id="register-form">
-          <form>
-            <input type="email" placeholder="Email" required /><br>
-            <input type="text" placeholder="Username" required /><br>
-            <input type="password" placeholder="Password" required /><br>
-            <input type="password" placeholder="Confirm your Password" required /><br>
-            <button type="submit">Register</button><br>
-            <h4><a>Login</a></h4><br>
-          </form>
+      <nav class="nav-bar">
+        <h1>Gadget<span>Hub</span></h1>
+        <ul>
+          <li><a href="/html/login.html">Login</a></li>
+          <li><a href="/html/register.html">Register</a></li>
+        </ul>
+      </nav>
+
+      <div id="home" class="home">
+        <div class="contents">
+          <h1>Experience Innovation: <span>Your Gadget Destination</span></h1>
+          <p>
+            Welcome to GadgetHub: Affordable innovation. Explore the latest
+            gadgets, join our community for exclusive offers.
+          </p>
+          <button type="button" id="shop-now">Buy Now</button>
         </div>
       </div>
+
+      <footer>
+        <div class="footer">
+          <p>&copy; 2023 Gadget<span>Hub</span>. All right reserved.</p>
+        </div>
+      </footer>
     </div>
   </body>
   <script>
-    const login = document.querySelector("#Login");
-    const register =  document.querySelector("#Register");
-    login.addEventListener('click' , function(){
-      document.getElementById('login-form').style.display = 'block';
-      document.getElementById('register-form').style.display = 'none';
-      login.style.display = 'none';
-      register.style.display = 'block';
-    })
+    //use buy now button
+    const intro = document.querySelector(".intro");
+    const shop_now = document.getElementById("shop-now");
 
-    register.addEventListener('click' , function(){
-      document.getElementById('register-form').style.display = 'block';
-      document.getElementById('login-form').style.display = 'none';
-      login.style.display = 'block';
-      register.style.display = 'none';
-    })
+    function scrollToShop() {
+      if (intro) {
+        intro.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+    shop_now.addEventListener("click", scrollToShop);
+
+    //using shop now button tp navigate to product page
+    const goToLogin = document.getElementById("shop-now");
+    goToLogin.addEventListener("click", function moveToProductPage() {
+      window.location.href = "/html/login.html";
+    });
   </script>
 </html>

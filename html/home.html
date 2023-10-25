@@ -25,15 +25,16 @@
 
       <div id="home" class="home">
         <div class="contents">
-          <h1>Buy Gadgets In <span>Reasonable</span> Price</h1>
+          <h1>Discover the Latest Tech <span>at Unbeatable Prices</span></h1>
           <p>
-            Get the electronic gadgets in discounted prices.We offer different
-            discounts for our costumers and provide cupons to our regular
-            costumers.
+            Explore a world of cutting-edge technology at your fingertips. From
+            smartphones and laptops to smartwatches and accessories, we bring
+            you the future of gadgets
           </p>
           <button type="button" id="shop-now">Buy Now</button>
         </div>
       </div>
+
       <div class="intro">
         <h2>Featured Products</h2>
       </div>
@@ -42,6 +43,10 @@
           <div class="col-1">
             <img src="/images/f-img-1.jpg" alt="prouct imaage" />
             <h4>iPhone 14 Pro Max</h4>
+            <div class="info">
+              <p>1100$</p>
+              <button type="button" class="cart-btn">Add To Cart</button>
+            </div>
             <div class="rating">
               <i class="fa fa-star"></i>
               <i class="fa fa-star"></i>
@@ -53,6 +58,10 @@
           <div class="col-1">
             <img src="/images/f-img-2.jpg" alt="prouct imaage" />
             <h4>MacBook Pro 16</h4>
+            <div class="info">
+              <p>1100$</p>
+              <button type="button" class="cart-btn">Add To Cart</button>
+            </div>
             <div class="rating">
               <i class="fa fa-star"></i>
               <i class="fa fa-star"></i>
@@ -64,32 +73,42 @@
           <div class="col-1">
             <img src="/images/f-img-3.jpg" alt="prouct imaage" />
             <h4>iPad Air 3</h4>
+            <div class="info">
+              <p>1100$</p>
+              <button type="button" class="cart-btn">Add To Cart</button>
+            </div>
             <div class="rating">
               <i class="fa fa-star"></i>
               <i class="fa fa-star"></i>
               <i class="fa fa-star"></i>
               <i class="fa fa-star-o"></i>
               <i class="fa fa-star-o"></i>
-
             </div>
           </div>
           <div class="col-1">
             <div class="product-item">
               <img src="/images/f-img-4.jpeg" alt="prouct imaage" />
               <h4>Apple Watch Series 6</h4>
+              <div class="info">
+                <p>1100$</p>
+                <button type="button" class="cart-btn">Add To Cart</button>
+              </div>
               <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star-o"></i>
-
               </div>
             </div>
           </div>
           <div class="col-1">
             <img src="/images/f-img-5.webp" alt="prouct imaage" />
             <h4>Apple Ear Phonees 2</h4>
+            <div class="info">
+              <p>1100$</p>
+              <button type="button" class="cart-btn">Add To Cart</button>
+            </div>
             <div class="rating">
               <i class="fa fa-star"></i>
               <i class="fa fa-star"></i>
@@ -100,6 +119,7 @@
           </div>
         </div>
       </div>
+
       <div class="intro">
         <h2>Offers</h2>
       </div>
@@ -137,8 +157,8 @@
 
     //using shop now button tp navigate to product page
     const shop_btn = document.getElementById("product-page");
-    shop_btn.addEventListener('click', function moveToProductPage(){
-      window.location.href = '/html/product.html';
+    shop_btn.addEventListener("click", function moveToProductPage() {
+      window.location.href = "/html/product.html";
     });
   </script>
 </html>
