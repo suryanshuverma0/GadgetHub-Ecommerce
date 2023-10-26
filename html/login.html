@@ -48,19 +48,5 @@
   </div>
 </body>
 
-<script>
-  const login_btn = document.getElementById("login-button");
-  login_btn.addEventListener("click", function login(event) {
-    event.preventDefault();
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
-
-    // Perform validation here (e.g., check with a server)
-    if (username === "veenasa676@gmail.com" && password === "12345") {
-      window.location.href = "/html/home.html"; // Redirect to home on success
-    } else {
-      alert("Login failed! Please check your credentials.");
-    }
-  });
-</script>
+<script src="/javascript/login.js"></script>
 </html>

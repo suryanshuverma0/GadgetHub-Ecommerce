@@ -18,8 +18,15 @@
         <ul>
           <li><a href="/html/home.html">Home</a></li>
           <li><a href="/html/product.html">Products</a></li>
-          <li><a href="/html/profile.html">Profile</a></li>
-          <li><a href="/html/about.html">About Us</a></li>
+          <li>
+            <a href="/html/Cart.html">
+              <div class="cart">
+                <i class="fa fa-shopping-cart cart-icon"></i>
+              </div>
+              <span class="badge badge-dark cart-notification-badge">3</span></a
+            >
+          </li>
+          <!-- <li><a href="/html/about.html">About Us</a></li> -->
         </ul>
       </nav>
 
@@ -136,6 +143,28 @@
           </div>
         </div>
       </div>
+
+      <div class="intro">
+        <h2>Brands</h2>
+      </div>
+
+      <div class="brands">
+        <div class="apple">
+          <img src="/images/brands/apple.png" alt="apple-logo" />
+        </div>
+        <div class="mi">
+          <img src="/images/brands/mi.png" alt="mi-logi" />
+        </div>
+        <div class="dell">
+          <img src="/images/brands/dell.png" alt="dell-logo" />
+        </div>
+        <div class="hp">
+          <img src="/images/brands/hp.png" alt="hp-logi" />
+        </div>
+        <div class="esewa">
+          <img src="/images/brands/esewa.png" alt="esewa-logo" />
+        </div>
+      </div>
       <footer>
         <div class="footer">
           <p>&copy; 2023 Gadget<span>Hub</span>. All right reserved.</p>
@@ -143,22 +172,5 @@
       </footer>
     </div>
   </body>
-  <script>
-    //use buy now button
-    const intro = document.querySelector(".intro");
-    const shop_now = document.getElementById("shop-now");
-
-    function scrollToShop() {
-      if (intro) {
-        intro.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-    shop_now.addEventListener("click", scrollToShop);
-
-    //using shop now button tp navigate to product page
-    const shop_btn = document.getElementById("product-page");
-    shop_btn.addEventListener("click", function moveToProductPage() {
-      window.location.href = "/html/product.html";
-    });
-  </script>
+  <script src="/javascript/home.js"></script>
 </html>

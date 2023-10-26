@@ -118,5 +118,30 @@ footer a {
   color: white;
   text-decoration: none;
 }
+.cart-notification-badge {
+  color: rgb(252, 252, 252);
+  position: absolute;
+  top: 10px; /* Adjust the vertical position */
+  right: 5px; /* Adjust the horizontal position */
+  background-color: rgb(246, 2, 2);
+  width: 20px; /* Equal width and height */
+  height: 20px; /* Equal width and height */
+  border-radius: 50%; /* Makes it a circle */
+  text-align: center; /* Center the content horizontally */
+  line-height: 20px; /* Center the content vertically */
+  font-size: 12px; /* Adjust the font size as needed */
+}
+
+.cart {
+  position: relative;
+  font-size: 30px;
+  margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.fa.fa-shopping-cart.cart-icon {
+  font-size: 40px;
+  position: relative;
+  left: 0px;
+}
 
 
