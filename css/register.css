@@ -127,3 +127,15 @@ a {
 a:hover {
   color: #0056b3;
 }
+.password-input {
+  display: flex;
+  align-items: center;
+}
+.password-toggle {
+  border: none;
+  background: transparent;
+  color: #007bff;
+  cursor: pointer;
+  margin-left: 3px;
+  font-size: 16px;
+}

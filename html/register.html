@@ -32,24 +32,34 @@
           />
         </div>
         <div class="form-group">
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Enter your email"
-            required
-          />
+          <label for="password">Password</label>
+          <div class="password-input">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              required
+            />
+            <button type="button" id="show_hide" class="password-toggle">
+              Show
+            </button>
+          </div>
         </div>
         <div class="form-group">
-          <label for="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            placeholder="Enter your password"
-            required
-          />
+          <label for="re-password">Re Enter Your Password</label>
+          <div class="password-input">
+            <input
+              type="password"
+              id="re-password"
+              name="re-password"
+              placeholder="Enter your password again"
+              required
+            />
+            <button type="button" id="show_hide-ree" class="password-toggle">
+              Show
+            </button>
+          </div>
         </div>
         <button type="submit" id="register-btn">Register</button>
         <p>Already Have Account?<a href="/html/login.html">Sign In</a></p>
