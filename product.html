@@ -4,20 +4,165 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Landing Paage</title>
-    <link rel="stylesheet" href="/css/product.css" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .nav-bar {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 0;
+      background-color: black;
+      color: white;
+    }
+    .nav-bar h1 {
+      font-size: 38px;
+      font-weight: 700;
+      margin: 5px 8px;
+    }
+    span {
+      color: red;
+    }
+    .nav-bar ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .nav-bar ul li {
+      list-style: none;
+      padding-right: 15px;
+    }
+    .nav-bar ul li a {
+      padding: 10px 14px;
+      list-style: none;
+      font-size: 24px;
+      text-decoration: none;
+      color: white;
+    }
+    .nav-bar ul li a:hover {
+      color: #0ef;
+    }
 
+    /* Apply smooth scrolling behavior to anchor links */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .row {
+      margin: 70px 0;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow: auto;
+    }
+
+    .col-1 {
+      margin-right: 10px;
+      text-align: center;
+    }
+    .col-1 img {
+      width: 360px;
+      height: 300px;
+    }
+    .col-1 img:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s;
+    }
+    .col-1 h4 {
+      font-size: 20px;
+      padding: 10px 10px;
+    }
+    .info p {
+      font-size: 19px;
+      font-weight: 800;
+    }
+    .info button {
+      font-size: 24px;
+      padding: 8px;
+      border-radius: 12px;
+      background-color: orange;
+      border: 1px solid transparent;
+      color: black;
+    }
+    .info button:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s;
+    }
+    .intro {
+      font-size: 30px;
+      font-weight: 400;
+      padding-bottom: 20px;
+      text-align: center;
+      padding-top: 35px;
+    }
+
+    .intro h2 {
+      display: inline-block;
+      position: relative;
+    }
+
+    .intro h2::after {
+      content: "";
+      display: block;
+      width: 120px;
+      height: 6px;
+      background-color: orange;
+      margin: 10px auto;
+    }
+
+    footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      font-size: 18px;
+      padding: 25px;
+    }
+    footer a {
+      font-size: 25px;
+      color: white;
+      text-decoration: none;
+    }
+    .cart-notification-badge {
+      color: rgb(252, 252, 252);
+      position: absolute;
+      top: 10px; /* Adjust the vertical position */
+      right: 5px; /* Adjust the horizontal position */
+      background-color: rgb(246, 2, 2);
+      width: 20px; /* Equal width and height */
+      height: 20px; /* Equal width and height */
+      border-radius: 50%; /* Makes it a circle */
+      text-align: center; /* Center the content horizontally */
+      line-height: 20px; /* Center the content vertically */
+      font-size: 12px; /* Adjust the font size as needed */
+    }
+
+    .cart {
+      position: relative;
+      font-size: 30px;
+      margin-right: 10px; /* Adjust the margin as needed */
+    }
+
+    .fa.fa-shopping-cart.cart-icon {
+      font-size: 40px;
+      position: relative;
+      left: 0px;
+    }
+  </style>
   <body>
     <div class="container">
       <nav class="nav-bar">
         <h1>Gadget<span>Hub</span></h1>
         <ul>
-          <li><a href="/html/home.html">Home</a></li>
-          <li><a href="/html/product.html">Products</a></li>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="product.html">Products</a></li>
           <li>
             <a href="/html/Cart.html">
               <div class="cart">

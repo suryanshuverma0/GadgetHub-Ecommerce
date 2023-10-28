@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .nav-bar {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      background-color: black;
+      color: white;
+      z-index: 1;
+      top: 0;
+    }
+
+    .nav-bar h1 {
+      font-size: 38px;
+      font-weight: 700;
+      margin: 5px 8px;
+    }
+
+    span {
+      color: red;
+    }
+
+    .nav-bar ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .nav-bar ul li {
+      list-style: none;
+      padding-right: 15px;
+    }
+
+    .nav-bar ul li a {
+      padding: 10px 14px;
+      list-style: none;
+      font-size: 24px;
+      text-decoration: none;
+      color: white;
+    }
+
+    .nav-bar ul li a:hover {
+      color: #0ef;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1a1a1a;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .centered-login-container {
+      background-color: #333;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      padding: 30px;
+      width: 350px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .form-group {
+      margin: 10px 0;
+      text-align: left;
+    }
+
+    label {
+      font-weight: bold;
+      color: #fff;
+    }
+
+    input {
+      padding: 10px;
+      width: 100%;
+      border: 1px solid #777;
+      border-radius: 5px;
+      background-color: #444;
+      color: #fff;
+    }
+
+    .login-button,
+    .registration-button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 12px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.2s;
+    }
+
+    .login-button:hover,
+    .registration-button:hover {
+      background-color: #0056b3;
+    }
+
+    p {
+      font-size: 14px;
+      margin-top: 10px;
+      color: #fff;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: #0056b3;
+    }
+
+    .password-input {
+      display: flex;
+      align-items: center;
+    }
+    .password-toggle {
+      border: none;
+      background: transparent;
+      color: #007bff;
+      cursor: pointer;
+      margin-left: 3px;
+      font-size: 16px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <nav class="nav-bar">
+        <h1>Gadget<span>Hub</span></h1>
+        <ul>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </nav>
+      <div class="centered-login-container">
+        <h2>Login</h2>
+        <form class="login-form" action="your_server_endpoint" method="post">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Enter your username"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <div class="password-input">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                required
+              />
+              <button type="button" id="show_hide" class="password-toggle">
+                Show
+              </button>
+            </div>
+          </div>
+
+          <button type="submit" class="login-button" id="login-button">
+            Login
+          </button>
+
+          <p>
+            Create a new account ?<a href="register.html">Sign Up </a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const login_btn = document.getElementById("login-button");
+    login_btn.addEventListener("click", function login(event) {
+      event.preventDefault();
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      const username_checked = localStorage.getItem("username");
+      const password_checked = localStorage.getItem("password");
+
+      if (username_checked === username) {
+        if (password_checked === password) {
+          window.location.href = "home.html";
+        } else {
+          alert("Invalid username and password");
+          location.reload();
+          //window.location.href = "/html/login.html";
+        }
+      } else {
+        alert("Invalid username and password");
+        location.reload();
+        //window.location.href = "/html/login.html";
+      }
+    });
+
+    const show_hide_btn = document.getElementById("show_hide");
+    show_hide_btn.addEventListener("click", () => {
+      const username = document.getElementById("username");
+      const password = document.getElementById("password");
+      if (password.type === "password") {
+        password.type = "text";
+        show_hide_btn.textContent = "Hide";
+      } else {
+        password.type = "password";
+        show_hide_btn.textContent = "Show";
+      }
+    });
+  </script>
+</html>
